@@ -1,0 +1,36 @@
+.shortList {
+  display: flex;
+  flex-direction: row;
+  line-height: 1.5;
+  overflow: hidden;
+  animation: openAnime 0.2s;
+  animation-fill-mode: forwards;
+
+  @keyframes openAnime {
+    from {
+      line-height: 0;
+      padding: 0 16px;
+      border-bottom: 1px solid transparent;
+    }
+    to {
+      line-height: 1.5;
+      padding: 4px 16px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .listTitle,
+  .listContent {
+    padding: 4px 8px;
+  }
+
+  .listTitle {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .listContent {
+    width: 70%;
+  }
+}

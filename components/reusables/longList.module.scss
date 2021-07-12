@@ -1,0 +1,103 @@
+.longList {
+  display: flex;
+  flex-direction: column;
+
+  @keyframes openAnime {
+    from {
+      line-height: 0;
+      padding: 0 16px;
+      border-bottom: 1px solid transparent;
+    }
+    to {
+      line-height: 1.5;
+      padding: 4px 16px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .listHead {
+    display: flex;
+    flex-direction: row;
+    animation: openAnime 0.2s;
+    animation-fill-mode: forwards;
+    background-color: rgba(0, 0, 0, 0.05);
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+      transition: 0.2s;
+    }
+
+    .headLeft,
+    .headRight {
+      padding: 4px 16px;
+      overflow: hidden;
+    }
+
+    .headLeft {
+      width: 30%;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .headRight {
+      width: 70%;
+    }
+  }
+
+  .listBodyActive {
+    display: flex;
+    flex-direction: row;
+    animation: openAnime 0.2s;
+    animation-fill-mode: forwards;
+
+    .bodyLeft,
+    .bodyRight {
+      padding: 4px 8px;
+      overflow: hidden;
+    }
+    .bodyLeft {
+      width: 30%;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .bodyRight {
+      width: 70%;
+    }
+  }
+
+  .listBody {
+    display: flex;
+    flex-direction: row;
+    animation: closeAnime 0.1s;
+    animation-fill-mode: forwards;
+
+    @keyframes closeAnime {
+      from {
+        line-height: 1.5;
+        padding: 4px 16px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      }
+      to {
+        line-height: 0;
+        padding: 0 16px;
+        border-bottom: none;
+      }
+    }
+
+    .bodyLeft,
+    .bodyRight {
+      padding: 0px 8px;
+      overflow: hidden;
+    }
+    .bodyLeft {
+      width: 30%;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .bodyRight {
+      width: 70%;
+    }
+  }
+}
