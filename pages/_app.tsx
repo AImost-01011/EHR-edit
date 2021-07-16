@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, []);
 
   return (
-    <UserProvider>
+    <UserProvider loginUrl="/api/auth/login">
       <MuiThemeProvider theme={theme}>
         <CssBaseline />
         <Provider store={store}>
