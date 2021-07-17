@@ -39,7 +39,7 @@ export default function Home() {
         router.push("/welcome");
       }
     }
-  }, [staffSelector.oriId_s]);
+  }, [staffSelector.loading]);
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>{error.message}</div>;
